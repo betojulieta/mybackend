@@ -1,0 +1,151 @@
+
+/* home */
+body{
+  background-color:#000;
+  color:#fff;
+}
+a{
+  color:#fff;
+}
+
+/* index
+body{
+  background-color:#000;
+  color:#fff;
+  }
+  a{
+  color:#fff;
+  }
+  td>button>a{
+  color:#000;
+  }  
+
+
+
+ */
+
+
+  div>button>a{
+  color:#000;
+  }   
+  body{
+    background-color: #000;
+    color: #fff;
+    }
+    table,tr,th,td{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-collapse: collapse;
+    }
+    body {
+      background-color: #000;
+      color: #fff;
+      }
+
+       /*
+      .grid-container {
+          display: grid;
+          grid-template-columns: repeat(10, 1fr);16
+          gap: 2px;
+          padding: 10px 0px 10px 0px;
+          text-align: left;
+      }
+
+      .grid-header {
+          font-weight: bold;
+          background-color: rgb(12, 20, 130);
+          padding: 5px 5px 5px 5px;
+          border: 0px solid #fff;
+          color: #fff;
+      }
+
+      .grid-item {
+          background-color: #fafafa;
+          padding: 5px;
+          border: 2px solid #fff;
+          color: #000;
+      }
+
+     create */
+
+      body{
+        background-color:#000;
+        color:#fff;
+      }
+      a{
+        color:#fff;
+      }
+      td>button>a{
+        color:#000;
+      }  
+       div>button>a{
+        color:#000;
+      }   
+      body{
+        background-color: #000;
+        color: #fff;
+      }
+      table,tr,th,td{
+        border: 2px solid #fff;
+        padding: 5px;
+        border-collapse: collapse;
+      }
+
+      /* show */
+      body{
+        background-color:#000;
+        color:#fff;
+      }
+      a{
+        color:#fff;
+      }
+      td>button>a{
+        color:#000;
+      }  
+       div>button>a{
+        color:#000;
+      } 
+      body{
+        background-color: #000;
+        color: #fff;
+      }
+      table,tr,th,td{
+        border: 2px solid #fff;
+        padding: 5px;
+        border-collapse: collapse;
+      }
+      body {
+        background-color: #000;
+        color: #fff;
+     }
+     .grid-container {
+         display: grid;
+         grid-template-columns: repeat(10, 1fr);
+         gap: 2px;
+         padding: 10px 0px 10px 0px;
+         text-align: left;
+     }
+
+     .grid-header {
+         font-weight: bold;
+         background-color: rgb(12, 20, 130);
+         padding: 5px 5px 5px 5px;
+         border: 0px solid #fff;
+         color: #fff;
+     }
+
+     .grid-item {
+         background-color: #fafafa;
+         padding: 5px;
+         border: 2px solid #fff;
+         color: #000;
+     }
+
+     /* edit */
+     body{
+      background-color:#000;
+      color:#fff;
+      }
+      a{
+      color:#fff;
+      }

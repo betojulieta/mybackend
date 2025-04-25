@@ -1,4 +1,4 @@
-name: Build and push Docker image
+name: Build, push Docker image and run migrations
 
 on:
   push:
@@ -6,8 +6,18 @@ on:
       - main  # O reemplaza por la rama que usas
 
 jobs:
-  build:
+  build-and-migrate:
     runs-on: ubuntu-latest
+
+    env:
+      APP_KEY: ${{ secrets.APP_KEY }}
+      APP_ENV: production
+      DB_CONNECTION: pgsql
+      DB_HOST: ${{ secrets.DB_HOST }}
+      DB_PORT: 5432
+      DB_DATABASE: ${{ secrets.DB_DATABASE }}
+      DB_USERNAME: ${{ secrets.DB_USERNAME }}
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
 
     steps:
     - name: Checkout repository
@@ -28,3 +38,18 @@ jobs:
         context: .
         push: true
         tags: humbertojulieta/laravel:latest
+
+    # Paso adicional para correr migraciones
+    - name: Run Laravel migrations
+      run: |
+        docker run --rm \
+          -e APP_KEY \
+          -e APP_ENV \
+          -e DB_CONNECTION \
+          -e DB_HOST \
+          -e DB_PORT \
+          -e DB_DATABASE \
+          -e DB_USERNAME \
+          -e DB_PASSWORD \
+          humbertojulieta/laravel:latest \
+          php artisan migrate --force

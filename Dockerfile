@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
     nano \
     libzip-dev \
     libpq-dev \
-    && docker-php-ext-install pdo pdo_mysql zip exif pcntl
+    && docker-php-ext-install pdo pdo_mysql zip exif pcntl bcmath
 
 # Instala Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer

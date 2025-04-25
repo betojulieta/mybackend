@@ -1,6 +1,7 @@
+# Usa PHP 8.2 con FPM
 FROM php:8.2-fpm
 
-# Instala dependencias del sistema
+# Instala dependencias del sistema y extensiones de PHP
 RUN apt-get update && apt-get install -y \
     build-essential \
     libpng-dev \
@@ -14,7 +15,8 @@ RUN apt-get update && apt-get install -y \
     nano \
     libzip-dev \
     libpq-dev \
-    && docker-php-ext-install pdo pdo_mysql zip exif pcntl bcmath
+    supervisor \
+    && docker-php-ext-install pdo pdo_pgsql zip exif pcntl bcmath
 
 # Instala Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
@@ -30,10 +32,11 @@ RUN composer install --no-interaction --optimize-autoloader
 # Da permisos a las carpetas necesarias
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
-# Puerto expuesto
-EXPOSE 8000
+# Configura Supervisor para ejecutar PHP-FPM y Laravel en el puerto correcto
+COPY supervisor.conf /etc/supervisor/conf.d/supervisor.conf
+
+# Puerto expuesto (Render usa 10000)
+EXPOSE 10000
 
 # Comando de inicio
-CMD php artisan serve --host=0.0.0.0 --port=8000
-
-
+CMD ["supervisord", "-c", "/etc/supervisor/supervisor.conf"]

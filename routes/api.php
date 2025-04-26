@@ -7,6 +7,14 @@ use App\Models\Supplier;
 use Illuminate\Support\Facades\Route;
 
 
+
+
+
+// Asegúrate de que todas las rutas API usen el middleware CORS
+Route::middleware(['cors'])->group(function () {
+
+
+
 #################productos#####################################
 Route::get('/productos/deleted', [ProductosController::class, 'indexDeleted']);
 
@@ -40,4 +48,10 @@ Route::post("/buscador",[BuscadorController::class,"buscador"] )->name('buscador
 
 Route::get('/test', function () {
     return response()->json(['message' => 'Ruta API activa'], 200);
+});
+
+
+
+
+
 });

@@ -45,13 +45,19 @@ Route::post("/buscador",[BuscadorController::class,"buscador"] )->name('buscador
 
 
 ################### rutas de prueba ################################
+/*
+Route::get('/test', function () {
+    return response()->json([
+        'message' => 'Ruta API activa'], 200);
+});
+*/
 
 Route::get('/test', function () {
-    return response()->json(['message' => 'Ruta API activa'], 200);
+    return response()->json([
+        'status' => 'success',
+        'message' => 'API funcionando'
+    ]);
 });
-
-
-
 
 
 });

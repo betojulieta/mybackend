@@ -1,5 +1,6 @@
 
 <?php 
+/*
 return [
     'paths' => ['api/*'], // Permite todas las rutas API
     'allowed_methods' => ['*'], // Permite todos los métodos (GET, POST, DELETE, etc.)
@@ -9,4 +10,15 @@ return [
     'exposed_headers' => [],
     'max_age' => 0,
     'supports_credentials' => false,
+];
+*/
+return [
+    'paths' => ['api/*'],
+    'allowed_methods' => ['*'],
+    'allowed_origins' => ['https://frontend-rho-liard-56.vercel.app'],
+    'allowed_origins_patterns' => [],
+    'allowed_headers' => ['*'],
+    'exposed_headers' => [],
+    'max_age' => 0,
+    'supports_credentials' => true,
 ];

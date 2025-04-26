@@ -42,6 +42,7 @@ jobs:
     # Paso adicional para correr migraciones
     - name: Run Laravel migrations
       run: |
+        sleep 10  # Espera 10 segundos para asegurar que la base de datos está lista
         docker run --rm \
           -e APP_KEY \
           -e APP_ENV \

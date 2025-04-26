@@ -33,3 +33,11 @@ Route::patch('/suppliers/{producto}/restore', [SuppliersController::class, 'rest
 
 ################### buscadores ################################
 Route::post("/buscador",[BuscadorController::class,"buscador"] )->name('buscador');
+
+
+
+################### rutas de prueba ################################
+
+Route::get('/test', function () {
+    return response()->json(['message' => 'Ruta API activa'], 200);
+});

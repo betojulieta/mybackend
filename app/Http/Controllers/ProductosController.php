@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Producto;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Log;
 class ProductosController extends Controller
 {
     
    public function index()
     {
-        
+        Log::info('Entrando a ProductosController@index');
         try {
             $sinPag = Producto::all(); // Obtener todos los productos
+            Log::info('Productos encontrados:', ['count' => count($sinPag)]);
             $productos = Producto::withoutTrashed()->orderBy('id', 'desc')->paginate(5); // Productos paginados
             
             return response()->json([
@@ -20,6 +21,7 @@ class ProductosController extends Controller
                 'sinPag' => $sinPag
             ], 200); // Enviar ambos datos en un objeto JSON
         } catch (\Exception $e) {
+            Log::error('Error al obtener productos: ' . $e->getMessage());
             return response()->json([
                 'message' => 'Ocurrió un error al obtener los productos.',
                 'error' => $e->getMessage(),

@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('producto');
             $table->string('debe');
             $table->string('abono');
-            $table->string('costo');            
-            $table->string('costoProveedor');
+            $table->string('costoC');            
+            $table->string('costoP');
             $table->softDeletes(); // Agrega la columna deleted_at
             #$table->string('proveedorCarne');
             #$table->string('costoCarne');

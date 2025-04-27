@@ -1,5 +1,9 @@
 
 <?php 
+
+
+
+
 /*
 return [
     'paths' => ['api/*'], // Permite todas las rutas API

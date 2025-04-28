@@ -29,6 +29,7 @@ return [
 
 */
 
+/*
 return [
     'paths' => ['api/*'], 
     'allowed_methods' => ['*'], 
@@ -39,7 +40,7 @@ return [
     'max_age' => 0,
     'supports_credentials' => true, // Permite cookies si es necesario
 ];
-
+*/
 
 
 
@@ -63,7 +64,7 @@ return [
 ];
 */
 
-/*
+
 return [
     'paths' => ['api/*'],
     'allowed_methods' => ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'], 
@@ -74,4 +75,3 @@ return [
     'max_age' => 0,
     'supports_credentials' => false,
 ];
-*/

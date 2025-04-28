@@ -41,7 +41,7 @@ return [
 ];
 
 
-
+*/
 return [
     'paths' => ['api/*'], 
 
@@ -59,7 +59,9 @@ return [
 
     'supports_credentials' => false, // 🔥 Como no usas sesiones, debes ponerlo en FALSE
 ];
-*/
+
+
+/*
 return [
     'paths' => ['api/*'],
     'allowed_methods' => ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'], 
@@ -70,3 +72,4 @@ return [
     'max_age' => 0,
     'supports_credentials' => false,
 ];
+*/

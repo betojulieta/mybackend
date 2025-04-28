@@ -4,9 +4,9 @@ use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
 
 // CORS Headers (opcional poner aquí, aunque es mejor hacerlo vía middleware en Laravel)
-header('Access-Control-Allow-Origin: https://frontend-rho-liard-56.vercel.app');
-header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type, Authorization');
+//header('Access-Control-Allow-Origin: https://frontend-rho-liard-56.vercel.app');
+//header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+//header('Access-Control-Allow-Headers: Content-Type, Authorization');
 
 define('LARAVEL_START', microtime(true));
 

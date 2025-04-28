@@ -29,7 +29,7 @@ return [
 ];
 
 
-
+funciona bien
 return [
     'paths' => ['api/*'], 
     'allowed_methods' => ['*'], 
@@ -41,7 +41,7 @@ return [
     'supports_credentials' => true, // Permite cookies si es necesario
 ];
 
-*/
+
 
 return [
     'paths' => ['api/*'], 
@@ -59,4 +59,15 @@ return [
     'max_age' => 0,
 
     'supports_credentials' => false, // 🔥 Como no usas sesiones, debes ponerlo en FALSE
+];
+*/
+return [
+    'paths' => ['api/*'],
+    'allowed_methods' => ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'], 
+    'allowed_origins' => ['https://frontend-rho-liard-56.vercel.app'],
+    'allowed_origins_patterns' => [],
+    'allowed_headers' => ['*'],
+    'exposed_headers' => [],
+    'max_age' => 0,
+    'supports_credentials' => false,
 ];

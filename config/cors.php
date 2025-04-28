@@ -27,8 +27,8 @@ return [
     'supports_credentials' => true,
 ];
 
+*/
 
-funciona bien
 return [
     'paths' => ['api/*'], 
     'allowed_methods' => ['*'], 
@@ -41,7 +41,9 @@ return [
 ];
 
 
-*/
+
+
+/*
 return [
     'paths' => ['api/*'], 
 
@@ -59,7 +61,7 @@ return [
 
     'supports_credentials' => false, // 🔥 Como no usas sesiones, debes ponerlo en FALSE
 ];
-
+*/
 
 /*
 return [
